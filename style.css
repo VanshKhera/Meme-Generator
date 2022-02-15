@@ -1,0 +1,22 @@
+.body-area {
+    display: flex;
+    flex-direction: column;
+    user-select: auto;
+    width: 20%;
+    margin: auto;
+}
+
+.body-area label, .body-area input {
+    margin: 4px 0px;
+}
+
+#meme{
+    margin: 50px 10px;
+    display: flex;
+    flex-direction: column;
+    user-select: auto;
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    border: 1px solid black;
+}

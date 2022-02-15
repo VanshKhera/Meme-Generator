@@ -1,1 +1,1 @@
-# Meme-Generator.
+# Meme-Generator
