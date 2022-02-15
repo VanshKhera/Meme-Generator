@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Meme Generator</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,8 +17,17 @@
   <input type="text" id="upperText">
   <label for="bottomText">Bottom Text</label>
   <input type="text" id="bottomText">
+  <h3>Export Settings</h3>
+  <label for="imgName">Image Name(without extension)</label>
+  <input type="text" id="imgName">
+  <select name="imgType" id="imgType">
+    <option value=".png">.png</option>
+    <option value=".jpeg">.jpeg</option>
+    <option value=".jfif">.jfif</option>
+  </select>
+  <button id="exportImg" class="exportImg" onclick="downloadMeme()">Export</button>
 </div>
-
+Repository: <a href="https://github.com/VanshKhera/Meme-Generator" target="_blank">https://github.com/VanshKhera/Meme-Generator</a> 
   <script src="script.js"></script>
 </body>
 </html>

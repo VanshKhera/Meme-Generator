@@ -2,6 +2,8 @@ const imgFileInp = document.getElementById("imgFileInp")
 const canvas = document.getElementById("meme")
 const upperTextInp = document.getElementById("upperText")
 const bottomTextInp = document.getElementById("bottomText")
+const imgName = document.getElementById("imgName")
+const imgFormat = document.getElementById("imgType")
 
 // display image on canvas
 let img;
@@ -47,4 +49,20 @@ function updateCanvas(canvas, img, upperText, bottomText){
     ctx.textBaseline = "bottom"
     ctx.strokeText(bottomText, width / 2, height - (height / 25))
     ctx.fillText(bottomText, width / 2, height - (height / 25))
+}
+
+function downloadMeme(){
+    if (imgName.value == ""){
+        alert("Please enter a name for your meme")
+        return
+    }
+    var image = canvas.toDataURL();  
+  
+    var tmpLink = document.createElement( 'a' );  
+    tmpLink.download = imgName.value + imgFormat.value;;  
+    tmpLink.href = image;  
+  
+    document.body.appendChild(tmpLink);  
+    tmpLink.click();  
+    document.body.removeChild(tmpLink);  
 }

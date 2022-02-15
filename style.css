@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
 .body-area {
     display: flex;
     flex-direction: column;
@@ -6,7 +11,7 @@
     margin: auto;
 }
 
-.body-area label, .body-area input {
+.body-area label, .body-area input, .body-area button{
     margin: 4px 0px;
 }
 
@@ -19,4 +24,7 @@
     height: 50%;
     margin: auto;
     border: 1px solid black;
+}
+.exportImg{
+    width: 25%;
 }
