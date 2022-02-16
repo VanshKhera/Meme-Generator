@@ -8,26 +8,37 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <canvas id="meme"></canvas>
+  <h1 style="text-align: center">OP Meme Generator</h1>
+  <div class="wrapper">
+    <canvas id="meme"></canvas>
+    <div id="second">
+      <div class="sec-body">
+        <br>
+        <h3>Upload an image</h3>
+        <input type="file" id="imgFileInp">
+        <label for="upperText">Upper Text</label>
+        <input type="text" id="upperText" class="input">
+        <label for="bottomText">Bottom Text</label>
+        <input type="text" id="bottomText" class="input">
+        <h3>Export Settings</h3>
+        <label for="imgName">Image Name(without extension)</label>
+        <input type="text" id="imgName" class="input">
+        <label for="imgType">Select an Image Format</label>
+        <select name="imgType" id="imgType">
+          <option value=".png">.png</option>
+          <option value=".jpeg">.jpeg</option>
+          <option value=".jfif">.jfif</option>
+        </select>
+        <button id="exportImg" class="exportImg btn btn-primary" onclick="downloadMeme()">Export</button>    
+      </div>
+    </div>
+  </div>
   <br>
-  <div class="body-area">
-    <label for="imgFileInp">Upload an image</label>
-  <input type="file" id="imgFileInp">
-  <label for="upperText">Upper Text</label>
-  <input type="text" id="upperText">
-  <label for="bottomText">Bottom Text</label>
-  <input type="text" id="bottomText">
-  <h3>Export Settings</h3>
-  <label for="imgName">Image Name(without extension)</label>
-  <input type="text" id="imgName">
-  <select name="imgType" id="imgType">
-    <option value=".png">.png</option>
-    <option value=".jpeg">.jpeg</option>
-    <option value=".jfif">.jfif</option>
-  </select>
-  <button id="exportImg" class="exportImg" onclick="downloadMeme()">Export</button>
-</div>
-Repository: <a href="https://github.com/VanshKhera/Meme-Generator" target="_blank">https://github.com/VanshKhera/Meme-Generator</a> 
+  <a href="https://github.com/VanshKhera/Meme-Generator" target="_blank"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" class="git-logo"></a> 
+  <hr>
+  &copy; Vansh Khera
+  <br>
+  MIT License: <a href="https://github.com/VanshKhera/Meme-Generator/blob/main/LICENSE" target="_blank">License</a>
   <script src="script.js"></script>
 </body>
 </html>

@@ -3,28 +3,79 @@
 body{
     font-family: 'Roboto', sans-serif;
 }
-.body-area {
-    display: flex;
-    flex-direction: column;
-    user-select: auto;
-    width: 20%;
-    margin: auto;
-}
 
-.body-area label, .body-area input, .body-area button{
-    margin: 4px 0px;
+.wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; 
 }
-
-#meme{
-    margin: 50px 10px;
-    display: flex;
-    flex-direction: column;
-    user-select: auto;
-    width: 50%;
-    height: 50%;
-    margin: auto;
+#meme {
+    width: 60%;
+    height: 100%;
+    float:left; /* add this */
     border: 1px solid black;
+    border-radius: 10px;
 }
-.exportImg{
-    width: 25%;
+#second {
+    width: 39%;
+    float: left;
+    white-space: pre;
+    overflow-y: scroll;
+}
+#second input, #second button, #second label, #second select, #second h3{
+    margin: 12px 1px;
+}
+h3{
+    display: inline;
+}
+.sec-body{
+    margin: -67px 13px;
+}
+
+.btn{
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn-primary{
+    color: #fff;
+    background-color: #0c56d0;
+}
+
+.btn:hover{
+    color: black;
+}
+
+.input{
+    width: 50%;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+select{
+    padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.git-logo{
+    width: 80px;
+    height: 80px;
 }
