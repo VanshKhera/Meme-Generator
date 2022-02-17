@@ -4,42 +4,55 @@ const upperTextInp = document.getElementById("upperText")
 const bottomTextInp = document.getElementById("bottomText")
 const imgName = document.getElementById("imgName")
 const imgFormat = document.getElementById("imgType")
+const fontSize = document.getElementById("font-size")
+const strokeColor = document.getElementById("strokeColor")
+const fontColor = document.getElementById("fontColor")
 
+const parameter = "canvas, img, upperTextInp.value, bottomTextInp.value, fontSize.value, strokeColor.value, fontColor.value"
 // display image on canvas
 let img;
 imgFileInp.addEventListener("change", () => {
     img = new Image()
     img.src = URL.createObjectURL(imgFileInp.files[0])
     img.addEventListener("load", () => {
-        updateCanvas(canvas, img, upperTextInp.value, bottomTextInp.value)
+        updateCanvas(canvas, img, upperTextInp.value, bottomTextInp.value, fontSize.value, strokeColor.value, fontColor.value)
     }, { once: true })
 })
 
 upperTextInp.addEventListener("change", () => {
-    updateCanvas(canvas, img, upperTextInp.value, bottomTextInp.value)
+    updateCanvas(canvas, img, upperTextInp.value, bottomTextInp.value, fontSize.value, strokeColor.value, fontColor.value)
 })
 
 bottomTextInp.addEventListener("change", () => {
-    updateCanvas(canvas, img, upperTextInp.value, bottomTextInp.value)
+    updateCanvas(canvas, img, upperTextInp.value, bottomTextInp.value, fontSize.value, strokeColor.value, fontColor.value)
 })
 
-function updateCanvas(canvas, img, upperText, bottomText){
+fontSize.addEventListener("change", () => {
+    updateCanvas(canvas, img, upperTextInp.value, bottomTextInp.value, fontSize.value, strokeColor.value, fontColor.value)
+})
+
+fontColor.addEventListener("change", () => {
+    updateCanvas(canvas, img, upperTextInp.value, bottomTextInp.value, fontSize.value, strokeColor.value, fontColor.value)
+})
+
+strokeColor.addEventListener("change", () => {
+    updateCanvas(canvas, img, upperTextInp.value, bottomTextInp.value, fontSize.value, strokeColor.value, fontColor.value)
+})
+function updateCanvas(canvas, img, upperText, bottomText, fontSize, strokeColor, fontColor){
     const ctx = canvas.getContext("2d")
     const height = img.height
     const width = img.width
-    const fontSize = 20
     
     canvas.width = width
     canvas.height = height
     ctx.drawImage(img, 0, 0);
  
-    ctx.strokeStyle = "black";
+    ctx.strokeStyle = `${strokeColor}`;
     ctx.lineWidth = Math.floor(fontSize / 4);
-    ctx.fillStyle = "white";
+    ctx.fillStyle = `${fontColor}`;
     ctx.textAlign = "center";
     ctx.lineJoin = "round";
-    ctx.font = `${fontSize}px sans-serif`;
-
+    ctx.font = fontSize + "px" + " Arial";
     // top text
     ctx.textBaseline = "top"
     ctx.strokeText(upperText, width / 2, height / 25)

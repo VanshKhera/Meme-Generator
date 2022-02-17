@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meme Generator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,11 +16,16 @@
       <div class="sec-body">
         <br>
         <h3>Upload an image</h3>
-        <input type="file" id="imgFileInp">
+        <input type="file" id="imgFileInp" hidden> <label for="imgFileInp" class="upload"><i class="fa fa-upload"></i> Upload</label>
         <label for="upperText">Upper Text</label>
         <input type="text" id="upperText" class="input">
         <label for="bottomText">Bottom Text</label>
         <input type="text" id="bottomText" class="input">
+        <label>Font Size</label>
+        <input type="number" id="font-size" class="input" onkeypress="return event.charCode >= 48" min="1"  value="48">
+        <label>Stroke Color</label> <input type="color" id="strokeColor" value="black">
+        <label>Font Color</label> <input type="color" id="fontColor" value="#FFFFFF">
+
         <h3>Export Settings</h3>
         <label for="imgName">Image Name(without extension)</label>
         <input type="text" id="imgName" class="input">
@@ -29,7 +35,7 @@
           <option value=".jpeg">.jpeg</option>
           <option value=".jfif">.jfif</option>
         </select>
-        <button id="exportImg" class="exportImg btn btn-primary" onclick="downloadMeme()">Export</button>    
+        <button id="exportImg" class="exportImg btn btn-primary" onclick="downloadMeme()"><i class="fa fa-download"></i> Export</button>    
       </div>
     </div>
   </div>
