@@ -7,33 +7,34 @@ body{
 .wrapper {
     width: 100%;
     height: 100%;
-    overflow: hidden; 
+    display: flex;
+    justify-content: space-between;
 }
 #meme {
-    width: 60%;
-    height: 100%;
-    float:left; /* add this */
+    flex-basis: 47%;
+    height: 22.5em;
     border: 1px solid black;
     border-radius: 10px;
+    margin: 1%;
 }
 #second {
-    width: 39%;
-    float: left;
+    flex-basis: 47%;
+    height: 22.5em;
     white-space: pre;
     overflow-y: scroll;
-    height: 456px;
     border-radius: 10px;
     border: 1px solid black;
+    margin: 1%;
 }
 #second input, #second button, #second label, #second select, #second h3{
     margin: 12px 1px;
 }
+
+
 h3{
     display: inline;
 }
-.sec-body{
-    margin: -67px 13px;
-}
+
 
 .btn{
     padding: 0.5rem;
@@ -107,4 +108,30 @@ input[type="color"]::-webkit-color-swatch {
     border-radius: 0.3rem;
     cursor: pointer;
     margin-top: 1rem;
+}
+
+@media screen and (max-width: 1270px) and (min-width: 852px) {
+
+    #meme {
+       width: 50%;
+    }
+
+    #second {
+        flex-basis: 47%;
+    }
+}
+
+
+@media screen and (max-width: 850px) {
+    .wrapper{
+        flex-direction: column;
+    }
+
+    #meme {
+        flex-basis: 47%;
+    }
+
+    #second {
+        flex-basis: 47%;
+    }
 }
